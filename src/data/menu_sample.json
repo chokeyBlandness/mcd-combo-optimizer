@@ -1,0 +1,26 @@
+{
+  "_comment": "麦当劳样例菜单（价格/营养为近似值，仅用于离线演示与算法验证；实际以麦当劳 MCP 实时返回为准）。字段与 query-meals + list-nutrition-foods 合并后的结构对齐。",
+  "items": [
+    {"code": "big_mac",        "name": "巨无霸",          "price": 24.5, "energy": 540, "protein": 26, "fat": 28, "carb": 42, "tags": ["主食"]},
+    {"code": "mcl_chicken",    "name": "麦辣鸡腿堡",      "price": 21.0, "energy": 515, "protein": 23, "fat": 26, "carb": 45, "tags": ["主食"]},
+    {"code": "grilled_chk",    "name": "板烧鸡腿堡",      "price": 22.0, "energy": 520, "protein": 25, "fat": 22, "carb": 48, "tags": ["主食"]},
+    {"code": "dbl_cheese",     "name": "双层吉士汉堡",    "price": 20.0, "energy": 440, "protein": 22, "fat": 23, "carb": 34, "tags": ["主食"]},
+    {"code": "filet_o",        "name": "麦香鱼",          "price": 22.5, "energy": 380, "protein": 17, "fat": 18, "carb": 38, "tags": ["主食"]},
+    {"code": "mm_egg",         "name": "吉士蛋麦满分",    "price": 13.0, "energy": 290, "protein": 14, "fat": 13, "carb": 28, "tags": ["主食", "早餐"]},
+    {"code": "saus_egg",       "name": "猪柳蛋麦满分",    "price": 17.0, "energy": 380, "protein": 18, "fat": 21, "carb": 30, "tags": ["主食", "早餐"]},
+    {"code": "congee",         "name": "皮蛋鸡肉粥",      "price": 11.0, "energy": 180, "protein": 8,  "fat": 5,  "carb": 26, "tags": ["主食", "早餐"]},
+    {"code": "fries_m",        "name": "薯条(中)",        "price": 12.0, "energy": 320, "protein": 4,  "fat": 15, "carb": 41, "tags": ["小食"]},
+    {"code": "nuggets_5",      "name": "麦乐鸡(5块)",     "price": 15.0, "energy": 220, "protein": 11, "fat": 13, "carb": 13, "tags": ["小食"]},
+    {"code": "wings_2",        "name": "鸡翅(2块)",      "price": 14.0, "energy": 250, "protein": 14, "fat": 17, "carb": 9,  "tags": ["小食"]},
+    {"code": "corn_cup",       "name": "玉米杯(小)",      "price": 9.0,  "energy": 90,  "protein": 3,  "fat": 2,  "carb": 18, "tags": ["小食", "蔬菜"]},
+    {"code": "apple",          "name": "苹果片",          "price": 7.0,  "energy": 35,  "protein": 0.3,"fat": 0.2,"carb": 8,  "tags": ["小食", "水果"]},
+    {"code": "salad",          "name": "田园沙拉",        "price": 16.0, "energy": 150, "protein": 6,  "fat": 8,  "carb": 12, "tags": ["小食", "蔬菜"]},
+    {"code": "cola_m",         "name": "可口可乐(中)",    "price": 9.0,  "energy": 140, "protein": 0,  "fat": 0,  "carb": 35, "tags": ["饮料"]},
+    {"code": "sprite_m",       "name": "雪碧(中)",        "price": 9.0,  "energy": 140, "protein": 0,  "fat": 0,  "carb": 35, "tags": ["饮料"]},
+    {"code": "orange_m",       "name": "美汁源果粒橙",    "price": 10.0, "energy": 160, "protein": 0,  "fat": 0,  "carb": 38, "tags": ["饮料"]},
+    {"code": "latte_m",        "name": "拿铁(中)",        "price": 18.0, "energy": 150, "protein": 7,  "fat": 7,  "carb": 13, "tags": ["饮料"]},
+    {"code": "soy_milk",       "name": "豆浆",            "price": 7.0,  "energy": 80,  "protein": 4,  "fat": 2,  "carb": 9,  "tags": ["饮料", "早餐"]},
+    {"code": "mcflurry",       "name": "麦旋风(OREO)",    "price": 13.0, "energy": 320, "protein": 6,  "fat": 12, "carb": 46, "tags": ["甜品"]},
+    {"code": "cone",           "name": "圆筒冰淇淋",      "price": 6.0,  "energy": 200, "protein": 4,  "fat": 9,  "carb": 27, "tags": ["甜品"]}
+  ]
+}
