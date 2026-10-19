@@ -1,3 +1,5 @@
 # 麦门组合优化器 依赖
 # PuLP 用于精确整数规划求解（推荐）；未安装时自动回退到零依赖启发式。
 pulp>=2.7
+# matplotlib 仅用于生成 README 演示图（src/visualize.py），非运行优化器必需。
+matplotlib>=3.5

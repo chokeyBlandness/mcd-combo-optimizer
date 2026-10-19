@@ -5,6 +5,14 @@
 
 ---
 
+## ✨ 核心亮点
+
+- 🧮 **真·运筹优化**：把点餐建模为「预算 + 热量 + 均衡约束」下的 0/1 整数规划，给出**理论最优解**，而非又一款"省钱计算器"。
+- 🔌 **真实 MCP 闭环**：`query-meals → list-nutrition-foods → 优化 → calculate-price` 端到端打通，结果经官方算价**交叉验证一致**。
+- 🤖 **WorkBuddy 原生 Skill**：开箱即用，自然语言即可触发（"30 元配份不超过 850 大卡的套餐"）。
+- 🪶 **零依赖可跑**：未装 PuLP 时自动回退启发式求解器；内置样例菜单，**无需 Token 即可离线验证算法**。
+- 📊 **可视化演示**：真实案例 + 多场景对比图，直观展示"每元营养值最大化"。
+
 ## 项目简介
 
 「麦门组合优化器」把点餐变成一个**带约束的最优化问题**：
@@ -103,6 +111,26 @@ python3 src/optimizer.py --budget 50 --require-main --require-drink --json
 
 ---
 
+## 📊 效果演示
+
+### 真实案例（Live · 上海门店 · 30 元 / 850 kcal）
+
+下图由**真实调用麦当劳 MCP** 拿到的门店菜单与营养数据驱动优化生成，并经官方 `calculate-price` 核验：
+
+![真实案例 · 麦门组合优化](./docs/fig_real_case.png)
+
+- 最优组合：**咖啡阿芙佳朵（¥15）+ 那么大鸡排（椒盐风味）（¥14）= ¥29.0**
+- 预算使用率 **96.7%**，合计 **524 kcal / 蛋白 28 g**
+- 与官方算价 **完全一致**（详见 [`mcp_live_evidence.md`](./mcp_live_evidence.md)）
+
+### 多场景优化产出（样例菜单）
+
+不同预算 / 热量约束下，优化器都能稳定给出「每元营养值最高」的组合，且预算利用率合理：
+
+![多场景优化对比](./docs/fig_scenarios.png)
+
+---
+
 ## 接入真实麦当劳 MCP（Live 模式）
 
 配置 MCP（见 `mcp-config.example.json`，Token 用环境变量占位，避免明文）：
@@ -147,8 +175,12 @@ mcd-combo-optimizer/
 │   └── SKILL.md                    # WorkBuddy Skill 定义
 └── src/
     ├── optimizer.py                # 组合优化核心（CLI + 可调用）
+    ├── visualize.py                # 演示图生成（README 配图）
     └── data/
         └── menu_sample.json        # 离线样例菜单
+docs/
+├── fig_real_case.png               # 真实案例演示图（Live MCP 数据）
+└── fig_scenarios.png               # 多场景优化对比图
 ```
 
 ---
