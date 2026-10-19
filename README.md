@@ -122,6 +122,16 @@ export MCD_MCP_TOKEN="你的真实Token"
 
 ---
 
+## Live 验证证据（真实 MCP 调用闭环）
+
+本项目已完成 **真实 MCP 调用闭环验证**：以官方 `query-nearby-stores` → `query-meals` → `list-nutrition-foods` 取真实门店 / 菜单 / 营养，喂给 `optimizer.py` 求最优，再用 `calculate-price` 官方算价核验。验证使用**真实数据**（上海门店 115 项真实餐品、160 条真实营养），优化组合 **¥29.00** 与官方算价 **完全一致**。
+
+📄 完整证据（门店、真实数据快照、优化结果、算价交叉验证、安全声明）：**[`mcp_live_evidence.md`](./mcp_live_evidence.md)**
+
+> ⚠️ 安全提示：麦当劳 MCP 共 35 个工具，其中 16 个为写操作（下单 / 领券 / 抽奖等）。本次验证**仅调用只读 + 算价工具，零下单、零修改账户**。参赛者日常自测请勿调用写操作工具。
+
+---
+
 ## 目录结构
 
 ```
@@ -129,6 +139,7 @@ mcd-combo-optimizer/
 ├── README.md                       # 项目说明（本文件）
 ├── CONTEST_DECLARATION.md          # 参赛声明（官方原文，不可修改）
 ├── MCP_INTEGRATION.md              # MCP 工具调用说明（必交）
+├── mcp_live_evidence.md            # Live 验证证据（真实 MCP 闭环 + 安全声明）
 ├── mcp-config.example.json         # 脱敏 MCP 配置（仅环境变量占位）
 ├── workbuddy.md                    # WorkBuddy 开发对话上下文（联动奖励）
 ├── requirements.txt                # 依赖（pulp，可选）
